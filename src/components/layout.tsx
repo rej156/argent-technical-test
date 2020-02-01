@@ -23,16 +23,22 @@ const Layout = ({ children }) => {
       <Header siteTitle={data.site.siteMetadata.title} />
       <div
         sx={{
+          display: 'flex',
+          flexDirection: 'column',
           margin: `0 auto`,
+          minHeight: '75vh',
           maxWidth: 960,
           padding: 3,
           paddingTop: 0,
+          '> :first-child': {
+            mb: 'auto'
+          }
         }}
       >
         <main>{children}</main>
         <footer>
           <Styled.p>
-            © {new Date().getFullYear()}, Built with
+            © Eric Juta {` `} {new Date().getFullYear()}, Built with
             {` `}
             <a href="https://www.gatsbyjs.org">Gatsby</a>
           </Styled.p>
