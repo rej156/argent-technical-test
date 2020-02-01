@@ -57,4 +57,23 @@ describe('ArgentForm', () => {
     })
     expect(screen.getByTestId('address-error').innerHTML).toEqual('Invalid address')
   })
+
+  it('should call setAddress prop with valid address', async () => {
+    const mockSetAddress = jest.fn()
+    const mockIsSubmitting = false
+    act(() => {
+
+      render(
+        <ArgentForm setAddress={mockSetAddress} isSubmitting={mockIsSubmitting}></ArgentForm>
+      )
+    })
+    const addressInput = screen.getByTestId('address-input')
+    const submitButton = screen.getByTestId('address-submit-button')
+    expect(addressInput).toBeTruthy()
+    await wait(() => {
+      fireEvent.change(addressInput, { target: { value: '0xFF5A7299ff6f0fbAad9b38906b77d08c0FBdc9A7' } })
+      fireEvent.submit(submitButton)
+    })
+    expect(mockSetAddress).toBeCalled()
+  })
 })

@@ -56,3 +56,11 @@
   1 - Asks a web3/argent user/provider to sign a time based uuid as a message persisted to a data store
 
   2 - POST that signature to a second serverless function that double checks the signature is either by the Argent wallet address or guardian via public address and message recovery
+
+- Customise a design system for it using theme-ui and the tailwind config with storybook components
+
+- Or maybe use react-native-web components with expo for cross platform goodness?
+
+#### Preview
+
+![App Screenshot](./static/app-screenshot.png)
