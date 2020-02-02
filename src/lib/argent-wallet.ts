@@ -43,7 +43,7 @@ interface ERC20TransfersByBigNumbers {
 }
 
 const getERC20Tokens = async (address: string) => {
-  const erc20FetchBalance = `http://api.etherscan.io/api?module=account&action=tokentx&address=${address}&startblock=0&endblock=999999999&sort=asc&apikey=G8H5XVHDWWGSHERXG66AX15K2MTKW49CYY`
+  const erc20FetchBalance = `https://api.etherscan.io/api?module=account&action=tokentx&address=${address}&startblock=0&endblock=999999999&sort=asc&apikey=G8H5XVHDWWGSHERXG66AX15K2MTKW49CYY`
   const {
     body: { result },
   } = await superagent.get(erc20FetchBalance)
