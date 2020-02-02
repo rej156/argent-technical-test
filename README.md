@@ -1,5 +1,11 @@
 # Argent Technical Test
 
+[![Netlify Status](https://api.netlify.com/api/v1/badges/eeceae24-2754-44b7-83b8-569e78b3d570/deploy-status)](https://app.netlify.com/sites/sad-einstein-ff6d2a/deploys)
+
+## Live deployment
+
+[Netlify deployed application](https://sad-einstein-ff6d2a.netlify.com/)
+
 ## Setup
 
 - `yarn install`
